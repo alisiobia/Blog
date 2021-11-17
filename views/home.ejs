@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+
+<form class="" action="/composePage" method="post">
+  <button type="submit" name="button">Compose</button>
+</form>
+
+
+
+  <% Posts.forEach((post, i) => {%>
+    <h1><%=post.title%></h1>
+    <p><%=post.content.substring(0,100) + "...."%> <a href="/posts/<%=post.title%>">Read More</a></p>
+
+<% })%>
+
+
+
+
+
+
+<%- include('partials/footer'); -%>

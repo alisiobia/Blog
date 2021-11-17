@@ -1,0 +1,24 @@
+<%- include('partials/header'); -%>
+
+<h1>Welcome to All Posts</h1>
+
+<form class="" action="/home" method="post">
+  <button type="submit" name="button">Back to Home</button>
+</form>
+
+
+  <%posts.forEach((post, i) => {%>
+    <%const lowTitle = lowerCase(post.title)%>
+<% if (lowTitle === postPage) {%>
+  <h1><%=post.title%></h1>
+  <p><%=post.content%></p>
+
+<% }%>
+<% })%>
+
+
+
+
+
+
+<%- include('partials/footer'); -%>
